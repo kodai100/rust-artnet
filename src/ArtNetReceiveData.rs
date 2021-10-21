@@ -33,7 +33,15 @@ impl ArtNetReceiveData<'_> {
 
             println!("Universe {:?}", buf.get_u16());
 
-            println!("Length Hi {:?}", buf.get_u16());
+            let length = buf.get_u16();
+            println!("Length {:?}", &length);
+
+            for i in 0..length {
+                print!("{:?} ", buf.get_u8());
+            }
+
+            print!("\n");
+
         } else {
 
         }
