@@ -1,7 +1,6 @@
 use std::str;
 use bytes::Buf;
 
-#[repr(C)]
 pub struct ArtNetReceiveData {
     pub opt_code: u16,
     pub protocol_version: u16,
